@@ -133,7 +133,7 @@ End Sub
 
 Private Function UnregisterHotKeyByIndex(Index As Long) As Boolean
   Dim hKey As VBRUN.KeyCodeConstants
-  Dim hMod As VBRUN.KeyCodeConstants
+  Dim hMod As RegisterHotKeyModifiers
   If (Index > 0 And Index <= m_HotKeys) Then
     With m_HotKey(Index)
       hKey = .Key
@@ -180,3 +180,4 @@ Private Sub Class_Terminate()
     End If
   End If
 End Sub
+
